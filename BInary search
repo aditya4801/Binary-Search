@@ -1,0 +1,18 @@
+class Solution {
+public:
+    int search(vector<int>& nums, int target) {
+        int start=0, close= int(nums.size())-1;
+
+         while(start<=close){
+             
+        int mid= start + (close-start)/2;
+
+          if(nums[mid]==target)return mid;
+
+          else if(target > nums[mid])start= mid+1;
+          
+          else close= mid-1;
+    }
+    return -1;
+    }
+};
